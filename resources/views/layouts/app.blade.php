@@ -114,6 +114,7 @@
                     @auth
                     @if(auth()->user()->admin)
                     <li><a href="{{ route('register') }}" class="myLtext">Registrar usuario</a></li>
+                    <li><a href="{{ url('users') }}" class="myLtext">Ver usuarios</a></li>
                     @endif
                     @endauth
                     <li>
@@ -175,6 +176,7 @@
                     </li>
                     @if(auth()->user()->admin)
                     <li><a href="{{ route('register') }}" class="myLtext">Registrar usuario</a></li>
+                    <li><a href="{{ url('users') }}" class="myLtext">Ver usuarios</a></li>
                     @endif
                     <li>
                         <a href="{{ route('logout') }}" class="myLtext" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Salir</a>
