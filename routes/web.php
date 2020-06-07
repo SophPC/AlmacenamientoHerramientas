@@ -21,6 +21,10 @@ Route::middleware('verified')->group(function(){
         Route::get('/incidence/{incidence}/edit', 'IncidenceController@edit');
         Route::patch('/incidence/{incidence}', 'IncidenceController@update');
         Route::delete('/incidence/{incidence}', 'IncidenceController@destroy');
+
+        Route::get('/users', 'UserController@showAll')->name('users.showAll');
+        Route::get('/user/{user}', 'UserController@show');
+        Route::delete('/user/{user}', 'UserController@destroy');
     });
 
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
